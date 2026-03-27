@@ -1,0 +1,584 @@
+:root {
+    --bg-color: #282828;
+    --text-color: #ffffff;
+    --nav-bg: rgba(217, 217, 217, 0.14);
+    
+    /* Default Theme */
+    --theme-primary: #3b82f6; /* Blue */
+}
+
+body[data-theme="blue"] {
+    --theme-primary: #3b82f6;
+}
+body[data-theme="red"] {
+    --theme-primary: #ef4444;
+}
+body[data-theme="orange"] {
+    --theme-primary: #f97316;
+}
+body[data-theme="yellow"] {
+    --theme-primary: #eab308;
+}
+body[data-theme="purple"] {
+    --theme-primary: #a855f7;
+}
+body[data-theme="green"] {
+    --theme-primary: #22c55e;
+}
+body[data-theme="pink"] {
+    --theme-primary: #ec4899;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Paytone One', sans-serif;
+    /* Extra height to demonstrate scrolling */
+    min-height: 200vh;
+}
+
+header.navbar {
+    position: sticky;
+    top: 50px; /* Slight padding from top based on design */
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100px; /* Slightly adjusted to center items better */
+    background-color: var(--nav-bg);
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo a {
+    font-size: 48px;
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: normal;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 32px;
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: normal;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--theme-primary);
+}
+
+/* Theme Button */
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--theme-primary);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-left: 20px;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Demo sections */
+main {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.intro-box {
+    border: 4px solid var(--text-color);
+    padding: 40px 50px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.main-title {
+    font-size: 76px;
+    color: var(--text-color);
+    font-weight: normal;
+    line-height: normal;
+}
+
+.sub-title {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--theme-primary);
+    margin-top: 15px;
+    margin-bottom: 35px;
+    transition: color 0.3s ease;
+    height: 60px; /* Fixed height to prevent layout shift */
+}
+
+#animated-title {
+    display: inline-block;
+    transition: opacity 0.5s ease;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.intro-description {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--text-color);
+    max-width: 1000px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.intro-description p {
+    margin-bottom: 0; /* Remove default margin for consistent Figma spacing */
+}
+
+.intro-graphics {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 60px;
+    width: 100%;
+    padding: 0;
+}
+
+.graphic-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.graphic-aircraft {
+    flex: 0 0 auto;
+}
+
+.graphic-face {
+    flex: 0 0 auto;
+    margin-right: 60px;
+}
+
+.graphic-architecture {
+    flex: 0 0 auto;
+}
+
+.intro-graphics svg {
+    max-width: 100%;
+    flex: 1;
+    height: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--theme-primary);
+    margin-top: 50px;
+    transition: color 0.3s ease;
+}
+
+/* Skills Section Styles */
+.skills-section {
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 40px;
+}
+
+.skills-banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.skills-line {
+    width: 82%;
+    height: 54px;
+}
+
+.skills-line-gray {
+    background-color: #d9d9d9;
+    margin-bottom: 4px; /* 58px center-to-center difference - 54px height = 4px gap */
+}
+
+.skills-line-theme {
+    background-color: var(--theme-primary);
+    transition: background-color 0.5s ease;
+}
+
+.skills-title-box {
+    position: absolute;
+    background-color: var(--bg-color); /* #282828 overlay */
+    width: 244px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centers it across both lines vertically */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.skills-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 64px;
+    color: var(--theme-primary);
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    transition: color 0.5s ease;
+    white-space: nowrap;
+}
+
+.skills-content {
+    background-color: #000000;
+    width: 100%;
+    min-height: 933px; /* Based on Figma node 261:301 */
+    margin-top: -70px; /* Pull it up under the banner to match positioning */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-grid-wrapper {
+    position: relative;
+    width: 1180px; /* Matches the vector width */
+    height: 888px; /* Matches the vector height */
+    display: flex;
+    justify-content: center;
+    border: 6px solid #ffffff;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #2d2d2f 0%, #282828 100%);
+    overflow: hidden;
+}
+
+.skills-connectors {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1281px;
+    height: 888px;
+    z-index: 1;
+}
+
+.skills-image-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 260px; /* Aligns the image down where it belongs over the vector nodes */
+    width: 620px;
+    height: 583px;
+    border: 6px solid #ffffff;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Skill Boxes */
+.skill-box {
+    position: absolute;
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+}
+
+
+.programming-box {
+    left: 30px; /* 120 - 83 vector offset */
+    top: 26px; /* 1603 - 1577 vector offset */
+    width: 530px;
+    height: 203px;
+    gap: 32px;
+}
+
+.framework-box {
+    right: 30px;
+    top: 26px;
+    width: 530px;
+    height: 203px;
+    gap: 32px;
+}
+
+.devops-rect-box {
+    left: 30px; /* 384 - 83, relative to 259:290 frame */
+    top: 261px; /* 1838 - 1577, relative to 259:290 frame */
+    width: 225px;
+    height: 589px;
+    z-index: 2;
+}
+
+.devops-cloud-title {
+    position: absolute;
+    left: 45px; /* 159 - 83, relative to 259:290 frame */
+    top: 284px; /* 1861 - 1577, relative to 259:290 frame */
+    width: 176px;
+    height: 100px;
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: var(--theme-primary);
+    white-space: pre;
+    z-index: 3;
+    transition: color 0.5s ease;
+}
+
+.devops-cloud-stack {
+    margin: 0;
+    width: 119px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    color: #ffffff;
+    white-space: pre-wrap;
+}
+
+.platforms-rect-box {
+    right: 30px; /* 1333 - 83, relative to 259:290 frame */
+    top: 259px; /* 1836 - 1577, relative to 259:290 frame */
+    width: 225px;
+    height: 589px;
+    z-index: 2;
+}
+
+.platforms-tools-title {
+    position: absolute;
+    right: 50px; /* 1333 - 83, relative to 259:290 frame */
+    top: 284px; /* 1861 - 1577, relative to 259:290 frame */
+    width: 183px;
+    height: 100px;
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: var(--theme-primary);
+    white-space: nowrap;
+    z-index: 3;
+    transition: color 0.5s ease;
+}
+
+.platforms-tools-stack {
+    margin: 0;
+    width: 263px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    color: #ffffff;
+    white-space: pre-wrap;
+}
+
+.skill-box-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 32px;
+    color: var(--theme-primary);
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    transition: color 0.5s ease;
+}
+
+.skill-box-text {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    text-align: center;
+}
+
+/* Projects Section Styles */
+.projects-section {
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+.projects-banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.projects-line {
+    width: 82%; /* ~1281px on 1440px frame */
+    height: 54px;
+}
+
+.projects-line-blue {
+    background-color: #0048bf;
+    margin-bottom: 4px;
+}
+
+.projects-line-gray {
+    background-color: #d9d9d9;
+}
+
+.projects-title-box {
+    position: absolute;
+    width: 333px;
+    height: 80px;
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.projects-title {
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--theme-primary);
+    transition: color 0.5s ease;
+}
+
+.projects-content {
+    min-height: 1180px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 38px;
+}
+
+.project-panel {
+    position: relative;
+    width: 1281px;
+    height: 1064px;
+    border: 4px solid #ffffff;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #2d2d2f 0%, #282828 100%);
+}
+
+.project-logo-link {
+    position: absolute;
+    left: 52px;
+    top: 52px;
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+.project-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.project-name {
+    position: absolute;
+    left: 331px; /* 414 - 83 */
+    top: 51px; /* 2712 - 2661 */
+    width: 425px;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--theme-primary);
+    text-decoration: underline;
+}
+
+.project-description {
+    position: absolute;
+    left: 331px; /* 414 - 83 */
+    top: 152px; /* 2813 - 2661 */
+    width: 911px;
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    letter-spacing: 1.6px;
+}
