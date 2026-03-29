@@ -5,28 +5,68 @@
     
     /* Default Theme */
     --theme-primary: #3b82f6; /* Blue */
+    --footer-layer-1: #0048bf;
+    --footer-layer-2: #4285f4;
+    --footer-layer-3: #00a8fd;
+    --footer-layer-4: #848aaf;
+    --footer-layer-5: #ffffff;
 }
 
 body[data-theme="blue"] {
     --theme-primary: #3b82f6;
+    --footer-layer-1: #0048bf;
+    --footer-layer-2: #4285f4;
+    --footer-layer-3: #00a8fd;
+    --footer-layer-4: #848aaf;
+    --footer-layer-5: #ffffff;
 }
 body[data-theme="red"] {
     --theme-primary: #ef4444;
+    --footer-layer-1: #9f1239;
+    --footer-layer-2: #ef4444;
+    --footer-layer-3: #f87171;
+    --footer-layer-4: #f9c4c4;
+    --footer-layer-5: #ffffff;
 }
 body[data-theme="orange"] {
     --theme-primary: #f97316;
+    --footer-layer-1: #9a3412;
+    --footer-layer-2: #f97316;
+    --footer-layer-3: #fb923c;
+    --footer-layer-4: #f7ceb0;
+    --footer-layer-5: #ffffff;
 }
 body[data-theme="yellow"] {
     --theme-primary: #eab308;
+    --footer-layer-1: #854d0e;
+    --footer-layer-2: #eab308;
+    --footer-layer-3: #facc15;
+    --footer-layer-4: #f3dfb1;
+    --footer-layer-5: #ffffff;
 }
 body[data-theme="purple"] {
     --theme-primary: #a855f7;
+    --footer-layer-1: #6b21a8;
+    --footer-layer-2: #a855f7;
+    --footer-layer-3: #c084fc;
+    --footer-layer-4: #dbc0f3;
+    --footer-layer-5: #ffffff;
 }
 body[data-theme="green"] {
     --theme-primary: #22c55e;
+    --footer-layer-1: #166534;
+    --footer-layer-2: #22c55e;
+    --footer-layer-3: #4ade80;
+    --footer-layer-4: #b7e4c8;
+    --footer-layer-5: #ffffff;
 }
 body[data-theme="pink"] {
     --theme-primary: #ec4899;
+    --footer-layer-1: #9d174d;
+    --footer-layer-2: #ec4899;
+    --footer-layer-3: #f472b6;
+    --footer-layer-4: #f6c8e0;
+    --footer-layer-5: #ffffff;
 }
 
 * {
@@ -258,7 +298,7 @@ main {
 }
 
 .skills-line-theme {
-    background-color: var(--theme-primary);
+    background-color: var(--footer-layer-1);
     transition: background-color 0.5s ease;
 }
 
@@ -491,8 +531,9 @@ main {
 }
 
 .projects-line-blue {
-    background-color: #0048bf;
+    background-color: var(--footer-layer-1);
     margin-bottom: 4px;
+    transition: background-color 0.5s ease;
 }
 
 .projects-line-gray {
@@ -503,7 +544,7 @@ main {
     position: absolute;
     width: 333px;
     height: 80px;
-    background-color: #282828;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -773,7 +814,7 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 1.02;
-    color: #307cff;
+    color: #ffffff;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
@@ -1126,11 +1167,11 @@ main {
     height: 39.70%;
 }
 
-.books-cover-106 {
-    left: 67.60%;
+.books-cover-104 {
+    left: 67.21%;
     top: 52.72%;
-    width: 25.06%;
-    height: 39.70%;
+    width: 29.12%;
+    height: 38.47%;
 }
 
 /* About Section Styles */
@@ -1265,6 +1306,91 @@ main {
     color: #ffffff;
 }
 
+/* Connect Section Styles */
+.connect-section {
+    --connect-max-width: 1281px;
+    width: 100%;
+    margin-top: 52px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connect-divider {
+    width: min(var(--connect-max-width), 90%);
+    height: 0;
+    border: 0;
+    margin: 0;
+    border-top: 4px solid #ffffff;
+}
+
+.connect-content {
+    width: min(var(--connect-max-width), 90%);
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 355px minmax(0, 1fr);
+    column-gap: 21px;
+    align-items: start;
+}
+
+.connect-title {
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 86px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--theme-primary);
+    transition: color 0.5s ease;
+}
+
+.connect-description {
+    margin: 23px 0 0;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    color: #ffffff;
+}
+
+/* Footer Layer Styles */
+.footer-layers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-layer {
+    width: min(1440px, 100%);
+    transition: background-color 0.5s ease;
+}
+
+.footer-layer-1 {
+    height: 102px;
+    background-color: var(--footer-layer-1);
+}
+
+.footer-layer-2 {
+    height: 80px;
+    background-color: var(--footer-layer-2);
+}
+
+.footer-layer-3 {
+    height: 67px;
+    background-color: var(--footer-layer-3);
+}
+
+.footer-layer-4 {
+    height: 44px;
+    background-color: var(--footer-layer-4);
+}
+
+.footer-layer-5 {
+    height: 22px;
+    background-color: var(--footer-layer-5);
+}
+
 @media (max-width: 1200px) {
     .achievement-card {
         padding: 20px;
@@ -1353,6 +1479,42 @@ main {
         width: calc(100% - 56px);
         font-size: 24px;
         line-height: 1.2;
+    }
+
+    .connect-content {
+        margin-top: 32px;
+        grid-template-columns: 290px minmax(0, 1fr);
+        column-gap: 18px;
+    }
+
+    .connect-title {
+        font-size: 70px;
+    }
+
+    .connect-description {
+        margin-top: 18px;
+        font-size: 21px;
+        line-height: 1.2;
+    }
+
+    .footer-layer-1 {
+        height: 84px;
+    }
+
+    .footer-layer-2 {
+        height: 66px;
+    }
+
+    .footer-layer-3 {
+        height: 55px;
+    }
+
+    .footer-layer-4 {
+        height: 36px;
+    }
+
+    .footer-layer-5 {
+        height: 18px;
     }
 }
 
@@ -1480,5 +1642,46 @@ main {
         width: calc(100% - 40px);
         font-size: 15px;
         line-height: 1.3;
+    }
+
+    .connect-section {
+        margin-top: 36px;
+        margin-bottom: 70px;
+    }
+
+    .connect-content {
+        margin-top: 24px;
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+
+    .connect-title {
+        font-size: 56px;
+    }
+
+    .connect-description {
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 1.28;
+    }
+
+    .footer-layer-1 {
+        height: 64px;
+    }
+
+    .footer-layer-2 {
+        height: 50px;
+    }
+
+    .footer-layer-3 {
+        height: 42px;
+    }
+
+    .footer-layer-4 {
+        height: 28px;
+    }
+
+    .footer-layer-5 {
+        height: 14px;
     }
 }
