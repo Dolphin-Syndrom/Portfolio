@@ -1,4 +1,5 @@
 :root {
+    --site-scale: 0.80;
     --bg-color: #282828;
     --text-color: #ffffff;
     --nav-bg: rgba(217, 217, 217, 0.14);
@@ -79,8 +80,18 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Paytone One', sans-serif;
+    zoom: var(--site-scale);
+    overflow-x: hidden;
     /* Extra height to demonstrate scrolling */
     min-height: 200vh;
+}
+
+@supports not (zoom: 1) {
+    body {
+        transform: scale(var(--site-scale));
+        transform-origin: top center;
+        width: calc(100% / var(--site-scale));
+    }
 }
 
 header.navbar {
@@ -1583,12 +1594,27 @@ main {
 
     .books-panel {
         margin-top: 24px;
+        aspect-ratio: auto;
+        min-height: auto;
+        padding: 22px 12px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
     }
 
     .books-intro {
-        top: 28px;
-        width: calc(100% - 36px);
+        position: static;
+        transform: none;
+        width: min(100%, 540px);
         font-size: 18px;
+    }
+
+    .books-cover {
+        position: static;
+        width: min(100%, 300px);
+        height: auto;
+        max-width: 100%;
     }
 
     .about-panel-top {
@@ -1683,5 +1709,418 @@ main {
 
     .footer-layer-5 {
         height: 14px;
+    }
+}
+
+/* Global Responsive Refinements */
+@media (max-width: 1200px) {
+    :root {
+        --site-scale: 0.92;
+    }
+
+    .intro-section {
+        max-width: 1000px;
+        margin-top: 28px;
+    }
+
+    .intro-box {
+        padding: 28px 30px;
+    }
+
+    .main-title {
+        font-size: 62px;
+    }
+
+    .sub-title {
+        font-size: 31px;
+        height: 48px;
+        margin-bottom: 24px;
+    }
+
+    .intro-description {
+        font-size: 21px;
+        max-width: 880px;
+    }
+
+    .intro-graphics {
+        margin-top: 34px;
+        gap: 16px;
+    }
+
+    .projects-content {
+        min-height: auto;
+        gap: 40px;
+    }
+
+    .project-panel {
+        width: min(1281px, 92%);
+        height: auto;
+        padding: 28px 24px;
+    }
+
+    .project-logo-link,
+    .project-name,
+    .project-description,
+    .architecture-showcase {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-logo-link {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 14px;
+    }
+
+    .project-name {
+        width: 100%;
+        font-size: 44px;
+        text-align: center;
+        text-decoration-thickness: 2px;
+    }
+
+    .project-description {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0.3px;
+    }
+
+    .architecture-showcase {
+        margin: 24px auto 0;
+        width: min(100%, 900px);
+    }
+
+    .architecture-label {
+        margin-top: 18px;
+        font-size: 38px;
+    }
+
+    .tri-projects-panel {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .tri-column {
+        padding: 24px 22px;
+    }
+
+    .tri-column + .tri-column {
+        border-left: 0;
+        border-top: 2px solid rgba(255, 255, 255, 0.88);
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --site-scale: 1;
+    }
+
+    header.navbar {
+        position: static;
+        top: auto;
+        padding: 12px;
+    }
+
+    .nav-container {
+        height: auto;
+        border-radius: 24px;
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .logo a {
+        font-size: 36px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 20px;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .theme-btn {
+        width: 34px;
+        height: 34px;
+        margin-left: 6px;
+    }
+
+    main {
+        padding-top: 20px;
+    }
+
+    .skills-content {
+        min-height: auto;
+        margin-top: -24px;
+        padding: 42px 12px 24px;
+    }
+
+    .skills-grid-wrapper {
+        width: 100%;
+        height: auto;
+        border-width: 4px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .skills-connectors {
+        display: none;
+    }
+
+    .programming-box,
+    .framework-box,
+    .devops-rect-box,
+    .platforms-rect-box,
+    .devops-cloud-title,
+    .platforms-tools-title,
+    .skills-image-container {
+        position: static;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin: 0;
+    }
+
+    .programming-box,
+    .framework-box,
+    .devops-rect-box,
+    .platforms-rect-box {
+        width: 100%;
+        height: auto;
+        min-height: 130px;
+        padding: 14px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .programming-box {
+        order: 1;
+    }
+
+    .framework-box {
+        order: 2;
+    }
+
+    .skills-image-container {
+        order: 3;
+        margin-inline: auto;
+    }
+
+    .devops-rect-box {
+        order: 4;
+    }
+
+    .platforms-rect-box {
+        order: 5;
+    }
+
+    .devops-cloud-title,
+    .platforms-tools-title {
+        display: none;
+    }
+
+    .devops-rect-box::before,
+    .platforms-rect-box::before {
+        display: block;
+        margin: 0 0 12px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 1.08;
+        text-align: center;
+        color: var(--theme-primary);
+    }
+
+    .devops-rect-box::before {
+        content: "DevOps & Cloud";
+    }
+
+    .platforms-rect-box::before {
+        content: "Platforms & Tools";
+    }
+
+    .devops-cloud-title,
+    .platforms-tools-title {
+        width: 100%;
+        height: auto;
+        font-size: 30px;
+        white-space: normal;
+    }
+
+    .devops-cloud-stack,
+    .platforms-tools-stack {
+        width: 100%;
+        font-size: 24px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .skills-image-container {
+        width: 100%;
+        max-width: 620px;
+        aspect-ratio: 620 / 583;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo a {
+        font-size: 30px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .theme-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .intro-section {
+        padding: 0 12px;
+    }
+
+    .intro-box {
+        padding: 20px 14px;
+    }
+
+    .main-title {
+        font-size: 42px;
+    }
+
+    .sub-title {
+        font-size: 22px;
+        height: 34px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+
+    .social-links {
+        gap: 18px;
+        margin-bottom: 14px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .intro-description {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .intro-graphics {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .graphic-face {
+        margin-right: 0;
+    }
+
+    .graphic-aircraft,
+    .graphic-face,
+    .graphic-architecture {
+        width: min(100%, 360px);
+    }
+
+    .skills-title,
+    .projects-title,
+    .achievements-title,
+    .books-title,
+    .about-title,
+    .connect-title {
+        font-size: 44px;
+    }
+
+    .skills-title-box {
+        width: 188px;
+        height: 64px;
+    }
+
+    .projects-title-box {
+        width: 236px;
+        height: 64px;
+    }
+
+    .project-panel {
+        padding: 18px 12px;
+    }
+
+    .project-logo-link {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 10px;
+    }
+
+    .project-name {
+        font-size: 30px;
+    }
+
+    .project-description {
+        font-size: 17px;
+        line-height: 1.32;
+    }
+
+    .architecture-label {
+        font-size: 24px;
+    }
+
+    .tri-title-link {
+        font-size: 24px;
+    }
+
+    .tri-title-link-center {
+        font-size: 20px;
+    }
+
+    .tri-description,
+    .tri-description-center {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .devops-rect-box::before,
+    .platforms-rect-box::before {
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
+
+    .devops-cloud-stack,
+    .platforms-tools-stack {
+        font-size: 20px;
+    }
+
+    .books-panel {
+        padding: 18px 10px 18px;
+        gap: 12px;
+    }
+
+    .books-intro {
+        width: min(100%, 320px);
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    .books-cover {
+        width: min(100%, 260px);
     }
 }
