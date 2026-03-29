@@ -3,9 +3,10 @@
     --bg-color: #282828;
     --text-color: #ffffff;
     --nav-bg: rgba(217, 217, 217, 0.14);
-    
+
     /* Default Theme */
-    --theme-primary: #3b82f6; /* Blue */
+    --theme-primary: #3b82f6;
+    /* Blue */
     --footer-layer-1: #0048bf;
     --footer-layer-2: #4285f4;
     --footer-layer-3: #00a8fd;
@@ -21,6 +22,7 @@ body[data-theme="blue"] {
     --footer-layer-4: #848aaf;
     --footer-layer-5: #ffffff;
 }
+
 body[data-theme="red"] {
     --theme-primary: #ef4444;
     --footer-layer-1: #9f1239;
@@ -29,6 +31,7 @@ body[data-theme="red"] {
     --footer-layer-4: #f9c4c4;
     --footer-layer-5: #ffffff;
 }
+
 body[data-theme="orange"] {
     --theme-primary: #f97316;
     --footer-layer-1: #9a3412;
@@ -37,6 +40,7 @@ body[data-theme="orange"] {
     --footer-layer-4: #f7ceb0;
     --footer-layer-5: #ffffff;
 }
+
 body[data-theme="yellow"] {
     --theme-primary: #eab308;
     --footer-layer-1: #854d0e;
@@ -45,6 +49,7 @@ body[data-theme="yellow"] {
     --footer-layer-4: #f3dfb1;
     --footer-layer-5: #ffffff;
 }
+
 body[data-theme="purple"] {
     --theme-primary: #a855f7;
     --footer-layer-1: #6b21a8;
@@ -53,6 +58,7 @@ body[data-theme="purple"] {
     --footer-layer-4: #dbc0f3;
     --footer-layer-5: #ffffff;
 }
+
 body[data-theme="green"] {
     --theme-primary: #22c55e;
     --footer-layer-1: #166534;
@@ -61,6 +67,7 @@ body[data-theme="green"] {
     --footer-layer-4: #b7e4c8;
     --footer-layer-5: #ffffff;
 }
+
 body[data-theme="pink"] {
     --theme-primary: #ec4899;
     --footer-layer-1: #9d174d;
@@ -96,7 +103,8 @@ body {
 
 header.navbar {
     position: sticky;
-    top: 50px; /* Slight padding from top based on design */
+    top: 50px;
+    /* Slight padding from top based on design */
     z-index: 1000;
     width: 100%;
     display: flex;
@@ -107,7 +115,8 @@ header.navbar {
 .nav-container {
     width: 100%;
     max-width: 1200px;
-    height: 100px; /* Slightly adjusted to center items better */
+    height: 100px;
+    /* Slightly adjusted to center items better */
     background-color: var(--nav-bg);
     border-radius: 60px;
     display: flex;
@@ -196,7 +205,8 @@ main {
     margin-top: 15px;
     margin-bottom: 35px;
     transition: color 0.3s ease;
-    height: 60px; /* Fixed height to prevent layout shift */
+    height: 60px;
+    /* Fixed height to prevent layout shift */
 }
 
 #animated-title {
@@ -236,7 +246,8 @@ main {
 }
 
 .intro-description p {
-    margin-bottom: 0; /* Remove default margin for consistent Figma spacing */
+    margin-bottom: 0;
+    /* Remove default margin for consistent Figma spacing */
 }
 
 .intro-graphics {
@@ -305,7 +316,8 @@ main {
 
 .skills-line-gray {
     background-color: #d9d9d9;
-    margin-bottom: 4px; /* 58px center-to-center difference - 54px height = 4px gap */
+    margin-bottom: 4px;
+    /* 58px center-to-center difference - 54px height = 4px gap */
 }
 
 .skills-line-theme {
@@ -315,7 +327,8 @@ main {
 
 .skills-title-box {
     position: absolute;
-    background-color: var(--bg-color); /* #282828 overlay */
+    background-color: var(--bg-color);
+    /* #282828 overlay */
     width: 244px;
     height: 80px;
     display: flex;
@@ -340,8 +353,10 @@ main {
 .skills-content {
     background-color: #000000;
     width: 100%;
-    min-height: 933px; /* Based on Figma node 261:301 */
-    margin-top: -70px; /* Pull it up under the banner to match positioning */
+    min-height: 933px;
+    /* Based on Figma node 261:301 */
+    margin-top: -70px;
+    /* Pull it up under the banner to match positioning */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -352,8 +367,10 @@ main {
 
 .skills-grid-wrapper {
     position: relative;
-    width: 1180px; /* Matches the vector width */
-    height: 888px; /* Matches the vector height */
+    width: 1180px;
+    /* Matches the vector width */
+    height: 888px;
+    /* Matches the vector height */
     display: flex;
     justify-content: center;
     border: 6px solid #ffffff;
@@ -375,7 +392,8 @@ main {
 .skills-image-container {
     position: relative;
     z-index: 2;
-    margin-top: 260px; /* Aligns the image down where it belongs over the vector nodes */
+    margin-top: 260px;
+    /* Aligns the image down where it belongs over the vector nodes */
     width: 620px;
     height: 583px;
     border: 6px solid #ffffff;
@@ -401,13 +419,15 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    
+
 }
 
 
 .programming-box {
-    left: 30px; /* 120 - 83 vector offset */
-    top: 26px; /* 1603 - 1577 vector offset */
+    left: 30px;
+    /* 120 - 83 vector offset */
+    top: 26px;
+    /* 1603 - 1577 vector offset */
     width: 530px;
     height: 203px;
     gap: 32px;
@@ -422,8 +442,10 @@ main {
 }
 
 .devops-rect-box {
-    left: 30px; /* 384 - 83, relative to 259:290 frame */
-    top: 261px; /* 1838 - 1577, relative to 259:290 frame */
+    left: 30px;
+    /* 384 - 83, relative to 259:290 frame */
+    top: 261px;
+    /* 1838 - 1577, relative to 259:290 frame */
     width: 225px;
     height: 589px;
     z-index: 2;
@@ -431,8 +453,10 @@ main {
 
 .devops-cloud-title {
     position: absolute;
-    left: 45px; /* 159 - 83, relative to 259:290 frame */
-    top: 284px; /* 1861 - 1577, relative to 259:290 frame */
+    left: 45px;
+    /* 159 - 83, relative to 259:290 frame */
+    top: 284px;
+    /* 1861 - 1577, relative to 259:290 frame */
     width: 176px;
     height: 100px;
     margin: 0;
@@ -460,8 +484,10 @@ main {
 }
 
 .platforms-rect-box {
-    right: 30px; /* 1333 - 83, relative to 259:290 frame */
-    top: 259px; /* 1836 - 1577, relative to 259:290 frame */
+    right: 30px;
+    /* 1333 - 83, relative to 259:290 frame */
+    top: 259px;
+    /* 1836 - 1577, relative to 259:290 frame */
     width: 225px;
     height: 589px;
     z-index: 2;
@@ -469,8 +495,10 @@ main {
 
 .platforms-tools-title {
     position: absolute;
-    right: 50px; /* 1333 - 83, relative to 259:290 frame */
-    top: 284px; /* 1861 - 1577, relative to 259:290 frame */
+    right: 50px;
+    /* 1333 - 83, relative to 259:290 frame */
+    top: 284px;
+    /* 1861 - 1577, relative to 259:290 frame */
     width: 183px;
     height: 100px;
     margin: 0;
@@ -537,7 +565,8 @@ main {
 }
 
 .projects-line {
-    width: 82%; /* ~1281px on 1440px frame */
+    width: 82%;
+    /* ~1281px on 1440px frame */
     height: 54px;
 }
 
@@ -611,8 +640,10 @@ main {
 
 .project-name {
     position: absolute;
-    left: 331px; /* 414 - 83 */
-    top: 51px; /* 2712 - 2661 */
+    left: 331px;
+    /* 414 - 83 */
+    top: 51px;
+    /* 2712 - 2661 */
     width: 425px;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
@@ -625,8 +656,10 @@ main {
 
 .project-description {
     position: absolute;
-    left: 331px; /* 414 - 83 */
-    top: 152px; /* 2813 - 2661 */
+    left: 331px;
+    /* 414 - 83 */
+    top: 152px;
+    /* 2813 - 2661 */
     width: 911px;
     margin: 0;
     font-family: 'Public Sans', sans-serif;
@@ -812,7 +845,7 @@ main {
     padding: 12px 34px;
 }
 
-.tri-column + .tri-column {
+.tri-column+.tri-column {
     border-left: 2px solid rgba(255, 255, 255, 0.88);
 }
 
@@ -896,7 +929,7 @@ main {
     box-shadow: 0 20px 42px rgba(0, 0, 0, 0.35);
 }
 
-.achievement-card + .achievement-card {
+.achievement-card+.achievement-card {
     margin-top: 12px;
 }
 
@@ -922,11 +955,11 @@ main {
     padding: 28px 24px;
 }
 
-.achievement-horizontal-item + .achievement-horizontal-item {
+.achievement-horizontal-item+.achievement-horizontal-item {
     border-left: none;
 }
 
-.achievement-horizontal-item + .achievement-horizontal-item::before {
+.achievement-horizontal-item+.achievement-horizontal-item::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1425,12 +1458,12 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .achievement-horizontal-item + .achievement-horizontal-item {
+    .achievement-horizontal-item+.achievement-horizontal-item {
         border-left: none;
         border-top: 2px solid rgba(255, 255, 255, 0.88);
     }
 
-    .achievement-horizontal-item + .achievement-horizontal-item::before {
+    .achievement-horizontal-item+.achievement-horizontal-item::before {
         content: none;
     }
 
@@ -1811,7 +1844,7 @@ main {
         padding: 24px 22px;
     }
 
-    .tri-column + .tri-column {
+    .tri-column+.tri-column {
         border-left: 0;
         border-top: 2px solid rgba(255, 255, 255, 0.88);
     }
@@ -1823,9 +1856,10 @@ main {
     }
 
     header.navbar {
-        position: static;
-        top: auto;
-        padding: 12px;
+        position: sticky;
+        top: 10px;
+        padding: 10px;
+        z-index: 1000;
     }
 
     .nav-container {
@@ -1978,12 +2012,18 @@ main {
 }
 
 @media (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
     .logo a {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .nav-links a {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .theme-btn {
@@ -1993,42 +2033,49 @@ main {
 
     .intro-section {
         padding: 0 12px;
+        margin-top: 10px;
     }
 
     .intro-box {
-        padding: 20px 14px;
+        padding: 24px 14px;
+        border-width: 2px;
     }
 
     .main-title {
-        font-size: 42px;
+        font-size: clamp(32px, 8vw, 42px);
     }
 
     .sub-title {
-        font-size: 22px;
-        height: 34px;
+        font-size: clamp(18px, 5vw, 22px);
+        height: auto;
+        min-height: 34px;
         margin-top: 8px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     .social-links {
-        gap: 18px;
+        gap: 16px;
         margin-bottom: 14px;
+        flex-wrap: wrap;
     }
 
     .social-icon {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
 
     .intro-description {
         font-size: 16px;
+        line-height: 1.5;
         margin-top: 10px;
+        padding: 0 10px;
     }
 
     .intro-graphics {
         flex-direction: column;
         align-items: center;
-        gap: 22px;
+        gap: 30px;
+        margin-top: 30px;
     }
 
     .graphic-face {
@@ -2038,7 +2085,8 @@ main {
     .graphic-aircraft,
     .graphic-face,
     .graphic-architecture {
-        width: min(100%, 360px);
+        width: min(100%, 300px);
+        height: auto;
     }
 
     .skills-title,
@@ -2047,80 +2095,115 @@ main {
     .books-title,
     .about-title,
     .connect-title {
-        font-size: 44px;
+        font-size: clamp(32px, 8vw, 44px);
     }
 
-    .skills-title-box {
-        width: 188px;
-        height: 64px;
-    }
-
+    .skills-title-box,
     .projects-title-box {
-        width: 236px;
-        height: 64px;
+        width: max-content;
+        padding: 0 20px;
+        height: 54px;
     }
 
-    .project-panel {
-        padding: 18px 12px;
+    .skills-grid-wrapper {
+        border-width: 2px;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        padding: 12px;
     }
 
-    .project-logo-link {
-        width: 110px;
-        height: 110px;
-        margin-bottom: 10px;
+    .skill-box-title {
+        font-size: clamp(18px, 5vw, 24px);
+        white-space: normal;
+        text-align: center;
     }
 
-    .project-name {
-        font-size: 30px;
-    }
-
-    .project-description {
-        font-size: 17px;
-        line-height: 1.32;
-    }
-
-    .architecture-label {
-        font-size: 24px;
-    }
-
-    .tri-title-link {
-        font-size: 24px;
-    }
-
-    .tri-title-link-center {
-        font-size: 20px;
-    }
-
-    .tri-description,
-    .tri-description-center {
-        max-width: 100%;
-        font-size: 16px;
-        line-height: 1.35;
+    .skill-box-text {
+        font-size: clamp(15px, 4.5vw, 20px);
+        line-height: 1.4;
     }
 
     .devops-rect-box::before,
     .platforms-rect-box::before {
         margin-bottom: 8px;
-        font-size: 26px;
+        font-size: clamp(20px, 6vw, 26px);
     }
 
     .devops-cloud-stack,
     .platforms-tools-stack {
-        font-size: 20px;
+        font-size: clamp(16px, 4.5vw, 20px);
+    }
+
+    .project-panel {
+        padding: 20px 14px;
+        border-width: 2px;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-logo-link {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+    }
+
+    .project-name {
+        font-size: clamp(24px, 6vw, 30px);
+    }
+
+    .project-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 16px;
+    }
+
+    .architecture-label {
+        font-size: clamp(18px, 5vw, 24px);
+    }
+
+    .tri-title-link {
+        font-size: clamp(20px, 5vw, 24px);
+        white-space: normal;
+        margin-bottom: 8px;
+    }
+
+    .tri-title-link-center {
+        font-size: clamp(18px, 4.5vw, 20px);
+    }
+
+    .tri-description,
+    .tri-description-center {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.45;
     }
 
     .books-panel {
-        padding: 18px 10px 18px;
-        gap: 12px;
+        padding: 20px 12px;
+        gap: 16px;
+        border-width: 2px;
+        border-radius: 8px;
     }
 
     .books-intro {
         width: min(100%, 320px);
-        font-size: 16px;
-        line-height: 1.25;
+        font-size: 15px;
+        line-height: 1.45;
     }
 
     .books-cover {
-        width: min(100%, 260px);
+        width: min(100%, 220px);
+    }
+
+    .achievement-card {
+        padding: 16px;
+        border-width: 2px;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .achievement-horizontal-strip {
+        border-width: 2px;
+        border-radius: 8px;
     }
 }
